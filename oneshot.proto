@@ -26,7 +26,7 @@ message RunRequest {
   // all files will be created in an empty directory files/ relative to the tool's working directory
   // files that are modified by the tool can be retrieved using output_file
   // the key of the map is just an identifier for the file in case of errors
-  map<string, FileLocation> input_files = 3;
+  map<string, InputFile> input_files = 3;
 
   // which files shall be harvested after execution and sent back to the caller in the response
   // the key of the map is an identifier for the file in the ToolResponse
@@ -45,6 +45,10 @@ message RunRequest {
   // whether to combine stdout and stderr and return them as stdout
   // if not given, the default is false
   bool combine_stdout_stderr = 7;
+
+  // how long to wait for termination before killing the tool (in seconds)
+  // 0 does not mean infinity!
+  int32 timeout = 8;
 }
 
 message FileLocation {
@@ -93,4 +97,12 @@ message FileContent {
 
   // where was the file found
   FileLocation location = 3;
+}
+
+message InputFile {
+  // where is the file located
+  FileLocation location = 1;
+
+  // what is its initial content
+  bytes content = 2;
 }

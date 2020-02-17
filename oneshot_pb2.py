@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='shell_wrapper',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\roneshot.proto\x12\rshell_wrapper\"\xab\x03\n\nRunRequest\x12\x1e\n\x16\x63ommand_line_parameter\x18\x01 \x03(\t\x12\r\n\x05stdin\x18\x02 \x01(\x0c\x12>\n\x0binput_files\x18\x03 \x03(\x0b\x32).shell_wrapper.RunRequest.InputFilesEntry\x12@\n\x0coutput_files\x18\x04 \x03(\x0b\x32*.shell_wrapper.RunRequest.OutputFilesEntry\x12\x15\n\robtain_stdout\x18\x05 \x01(\x08\x12\x15\n\robtain_stderr\x18\x06 \x01(\x08\x12\x1d\n\x15\x63ombine_stdout_stderr\x18\x07 \x01(\x08\x1aN\n\x0fInputFilesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.shell_wrapper.FileLocation:\x02\x38\x01\x1aO\n\x10OutputFilesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.shell_wrapper.FileLocation:\x02\x38\x01\".\n\x0c\x46ileLocation\x12\x10\n\x08\x66ilename\x18\x01 \x01(\t\x12\x0c\n\x04path\x18\x02 \x03(\t\"i\n\x0bRunResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x15\n\rrequest_error\x18\x02 \x01(\t\x12\x32\n\rtool_response\x18\x03 \x01(\x0b\x32\x1b.shell_wrapper.ToolResponse\"r\n\x0cToolResponse\x12\x10\n\x08\x65xitcode\x18\x01 \x01(\x05\x12\x0e\n\x06stdout\x18\x02 \x01(\x0c\x12\x0e\n\x06stderr\x18\x03 \x01(\x0c\x12\x30\n\x0coutput_files\x18\x04 \x03(\x0b\x32\x1a.shell_wrapper.FileContent\"Z\n\x0b\x46ileContent\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x02 \x01(\x0c\x12-\n\x08location\x18\x03 \x01(\x0b\x32\x1b.shell_wrapper.FileLocation2N\n\x0eShellComponent\x12<\n\x03Run\x12\x19.shell_wrapper.RunRequest\x1a\x1a.shell_wrapper.RunResponseb\x06proto3')
+  serialized_pb=_b('\n\roneshot.proto\x12\rshell_wrapper\"\xb9\x03\n\nRunRequest\x12\x1e\n\x16\x63ommand_line_parameter\x18\x01 \x03(\t\x12\r\n\x05stdin\x18\x02 \x01(\x0c\x12>\n\x0binput_files\x18\x03 \x03(\x0b\x32).shell_wrapper.RunRequest.InputFilesEntry\x12@\n\x0coutput_files\x18\x04 \x03(\x0b\x32*.shell_wrapper.RunRequest.OutputFilesEntry\x12\x15\n\robtain_stdout\x18\x05 \x01(\x08\x12\x15\n\robtain_stderr\x18\x06 \x01(\x08\x12\x1d\n\x15\x63ombine_stdout_stderr\x18\x07 \x01(\x08\x12\x0f\n\x07timeout\x18\x08 \x01(\x05\x1aK\n\x0fInputFilesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\'\n\x05value\x18\x02 \x01(\x0b\x32\x18.shell_wrapper.InputFile:\x02\x38\x01\x1aO\n\x10OutputFilesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.shell_wrapper.FileLocation:\x02\x38\x01\".\n\x0c\x46ileLocation\x12\x10\n\x08\x66ilename\x18\x01 \x01(\t\x12\x0c\n\x04path\x18\x02 \x03(\t\"i\n\x0bRunResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x15\n\rrequest_error\x18\x02 \x01(\t\x12\x32\n\rtool_response\x18\x03 \x01(\x0b\x32\x1b.shell_wrapper.ToolResponse\"r\n\x0cToolResponse\x12\x10\n\x08\x65xitcode\x18\x01 \x01(\x05\x12\x0e\n\x06stdout\x18\x02 \x01(\x0c\x12\x0e\n\x06stderr\x18\x03 \x01(\x0c\x12\x30\n\x0coutput_files\x18\x04 \x03(\x0b\x32\x1a.shell_wrapper.FileContent\"Z\n\x0b\x46ileContent\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x02 \x01(\x0c\x12-\n\x08location\x18\x03 \x01(\x0b\x32\x1b.shell_wrapper.FileLocation\"K\n\tInputFile\x12-\n\x08location\x18\x01 \x01(\x0b\x32\x1b.shell_wrapper.FileLocation\x12\x0f\n\x07\x63ontent\x18\x02 \x01(\x0c\x32N\n\x0eShellComponent\x12<\n\x03Run\x12\x19.shell_wrapper.RunRequest\x1a\x1a.shell_wrapper.RunResponseb\x06proto3')
 )
 
 
@@ -58,8 +58,8 @@ _RUNREQUEST_INPUTFILESENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=301,
-  serialized_end=379,
+  serialized_start=318,
+  serialized_end=393,
 )
 
 _RUNREQUEST_OUTPUTFILESENTRY = _descriptor.Descriptor(
@@ -95,8 +95,8 @@ _RUNREQUEST_OUTPUTFILESENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=381,
-  serialized_end=460,
+  serialized_start=395,
+  serialized_end=474,
 )
 
 _RUNREQUEST = _descriptor.Descriptor(
@@ -155,6 +155,13 @@ _RUNREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='timeout', full_name='shell_wrapper.RunRequest.timeout', index=7,
+      number=8, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -168,7 +175,7 @@ _RUNREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=33,
-  serialized_end=460,
+  serialized_end=474,
 )
 
 
@@ -205,8 +212,8 @@ _FILELOCATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=462,
-  serialized_end=508,
+  serialized_start=476,
+  serialized_end=522,
 )
 
 
@@ -250,8 +257,8 @@ _RUNRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=510,
-  serialized_end=615,
+  serialized_start=524,
+  serialized_end=629,
 )
 
 
@@ -302,8 +309,8 @@ _TOOLRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=617,
-  serialized_end=731,
+  serialized_start=631,
+  serialized_end=745,
 )
 
 
@@ -347,11 +354,49 @@ _FILECONTENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=733,
-  serialized_end=823,
+  serialized_start=747,
+  serialized_end=837,
 )
 
-_RUNREQUEST_INPUTFILESENTRY.fields_by_name['value'].message_type = _FILELOCATION
+
+_INPUTFILE = _descriptor.Descriptor(
+  name='InputFile',
+  full_name='shell_wrapper.InputFile',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='location', full_name='shell_wrapper.InputFile.location', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='content', full_name='shell_wrapper.InputFile.content', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=839,
+  serialized_end=914,
+)
+
+_RUNREQUEST_INPUTFILESENTRY.fields_by_name['value'].message_type = _INPUTFILE
 _RUNREQUEST_INPUTFILESENTRY.containing_type = _RUNREQUEST
 _RUNREQUEST_OUTPUTFILESENTRY.fields_by_name['value'].message_type = _FILELOCATION
 _RUNREQUEST_OUTPUTFILESENTRY.containing_type = _RUNREQUEST
@@ -360,11 +405,13 @@ _RUNREQUEST.fields_by_name['output_files'].message_type = _RUNREQUEST_OUTPUTFILE
 _RUNRESPONSE.fields_by_name['tool_response'].message_type = _TOOLRESPONSE
 _TOOLRESPONSE.fields_by_name['output_files'].message_type = _FILECONTENT
 _FILECONTENT.fields_by_name['location'].message_type = _FILELOCATION
+_INPUTFILE.fields_by_name['location'].message_type = _FILELOCATION
 DESCRIPTOR.message_types_by_name['RunRequest'] = _RUNREQUEST
 DESCRIPTOR.message_types_by_name['FileLocation'] = _FILELOCATION
 DESCRIPTOR.message_types_by_name['RunResponse'] = _RUNRESPONSE
 DESCRIPTOR.message_types_by_name['ToolResponse'] = _TOOLRESPONSE
 DESCRIPTOR.message_types_by_name['FileContent'] = _FILECONTENT
+DESCRIPTOR.message_types_by_name['InputFile'] = _INPUTFILE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RunRequest = _reflection.GeneratedProtocolMessageType('RunRequest', (_message.Message,), dict(
@@ -418,6 +465,13 @@ FileContent = _reflection.GeneratedProtocolMessageType('FileContent', (_message.
   ))
 _sym_db.RegisterMessage(FileContent)
 
+InputFile = _reflection.GeneratedProtocolMessageType('InputFile', (_message.Message,), dict(
+  DESCRIPTOR = _INPUTFILE,
+  __module__ = 'oneshot_pb2'
+  # @@protoc_insertion_point(class_scope:shell_wrapper.InputFile)
+  ))
+_sym_db.RegisterMessage(InputFile)
+
 
 _RUNREQUEST_INPUTFILESENTRY._options = None
 _RUNREQUEST_OUTPUTFILESENTRY._options = None
@@ -428,8 +482,8 @@ _SHELLCOMPONENT = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=825,
-  serialized_end=903,
+  serialized_start=916,
+  serialized_end=994,
   methods=[
   _descriptor.MethodDescriptor(
     name='Run',
