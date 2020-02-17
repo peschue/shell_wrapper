@@ -1,2 +1,3 @@
-# ai4eu-acumos-shell-wrapper
-Protobuf-based service for generic Shell Applications
+# shell-wrapper
+
+Protobuf-based service for generic Shell Applications, indented for usage in Acumos in the AI4EU Project.
