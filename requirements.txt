@@ -1,6 +1,5 @@
 -e git+http://github.com/ai4eu/interfaces.git@peter-shellwrapper
 grpcio=1.16.1
 grpcio-tools=1.16.1
-pexpect=4.8.0
 protobuf=3.11.3
 setuptools=45.2.0
